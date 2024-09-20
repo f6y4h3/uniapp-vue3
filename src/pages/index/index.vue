@@ -7,16 +7,14 @@
   </view>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      title: 'Hello',
-    }
-  },
-  onLoad() {},
-  methods: {},
-}
+<script setup lang="ts">
+import { ref } from "vue";
+import ajax from "../../api";
+const title = ref("Hello");
+// console.log(ajax);
+ajax.getInfo().then((res) => {
+  console.log(111, res);
+});
 </script>
 
 <style>
