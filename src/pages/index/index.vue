@@ -2,12 +2,13 @@
   <view class="content">
     <image class="logo" src="/static/logo.png"></image>
     <view class="text-area">
-      <text class="title">{{ title }}</text>
+      <text class="title text-[30px] text-[#000]/50">{{ title }}</text>
+      <wd-button>成功按钮</wd-button>
     </view>
   </view>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { ref } from "vue";
 import ajax from "../../api";
 const title = ref("Hello");
@@ -39,8 +40,8 @@ ajax.getInfo().then((res) => {
   justify-content: center;
 }
 
-.title {
+/* .title {
   font-size: 36rpx;
   color: #8f8f94;
-}
+} */
 </style>
